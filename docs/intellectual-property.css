@@ -1,0 +1,39 @@
+/* --------------------------------------------- */
+
+.intellectual-property {
+    width: 900px;
+    height: 450px;
+    margin: -120px auto 0 auto;
+    justify-items: center;
+    position: relative;
+}
+
+.intellectual-property hr {
+    width: 100%;
+    height: 1px;
+    position: relative;
+    top: 120px;
+    background: #B92023;
+}
+
+.property-img {
+    margin: 150px 0 0 auto;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.property1 {
+    width: 900px;
+    height: 450px;
+    margin: 0px auto 0 auto;
+    justify-items: center;
+    position: relative;
+}
+
+.property1 img {
+    margin: 0px 0 0 auto;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
