@@ -28,6 +28,7 @@
     height: 450px;
     margin: 0px auto 0 auto;
     justify-items: center;
+    align-items: center;
     position: relative;
 }
 
@@ -37,3 +38,97 @@
     position: relative;
     width: 100%;
 }
+
+.property1 p {
+    display: flex;
+    position: relative;
+}
+
+.property1-info1 {
+    top: -410px;
+    left: -430px;
+    color: #B92023;
+    font-size: 14px;
+}
+
+.property1-info1-num {
+    top: -448px;
+    left: -365px;
+    font-weight: bold;
+    color: white;
+}
+
+.property1-info2 {
+    top: -485px;
+    left: -295px;
+    color: #B92023;
+    font-size: 14px;
+}
+
+.property1-info2-num {
+    top: -525px;
+    left: -230px;
+    font-weight: bold;
+    color: white;
+}
+
+.property1-title {
+    top: -570px;
+    left: 210px;
+    font-size: 18px;
+    color: #B92023;
+    font-weight: bold;
+}
+
+.property1-content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    line-height: 1px;
+    top: -590px;
+    left: 350px;
+    width: 500px;
+}
+
+/* 표 스타일 */
+.property1-table {
+    width: 100%;
+    border-collapse: separate;       /* 셀 간격 조절 용이 */
+    border-spacing: 0 4px;          /* 행 간 간격 (ppt에서 행 간격처럼) */
+    font-size: 12px;
+}
+
+.property1-table th,
+.property1-table td {
+    padding: 8px 6px;               /* 셀 안 여백 */
+    text-align: left;
+}
+
+/* 각 열 너비/정렬 조정 – 여기서 간격 미세하게 튜닝 가능
+.property1-table th:nth-child(1),
+.property1-table td:nth-child(1) {
+    width: 40px;
+}
+
+.property1-table th:nth-child(2),
+.property1-table td:nth-child(2) {
+    width: 220px;
+}
+
+.property1-table th:nth-child(3),
+.property1-table td:nth-child(3) {
+    width: 90px;
+    text-align: center;
+}
+
+.property1-table th:nth-child(4),
+.property1-table td:nth-child(4) {
+    width: 80px;
+    text-align: center;
+}
+
+.property1-table th:nth-child(5),
+.property1-table td:nth-child(5) {
+    width: 50px;
+    text-align: center;
+} */
