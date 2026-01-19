@@ -2,8 +2,8 @@
 
 .intellectual-property {
     width: 900px;
-    height: 450px;
-    margin: -120px auto 0 auto;
+    height: auto;
+    margin: 0px auto 0 auto;
     justify-items: center;
     position: relative;
 }
@@ -12,12 +12,12 @@
     width: 100%;
     height: 1px;
     position: relative;
-    top: 120px;
+    top: 0px;
     background: #B92023;
 }
 
 .property-img {
-    margin: 150px 0 0 auto;
+    margin: 0px 0 0 auto;
     display: flex;
     position: relative;
     width: 100%;
@@ -92,16 +92,18 @@
 
 /* 표 스타일 */
 .property1-table {
-    width: 100%;
+    width: 380px;
+    margin-top: 12px;
     border-collapse: separate;       /* 셀 간격 조절 용이 */
     border-spacing: 0 4px;          /* 행 간 간격 (ppt에서 행 간격처럼) */
-    font-size: 12px;
+    font-size: 8px;
 }
 
 .property1-table th,
 .property1-table td {
-    padding: 8px 6px;               /* 셀 안 여백 */
+    padding: 0px 6px;               /* 셀 안 여백 */
     text-align: left;
+    line-height: 1.2;
 }
 
 /* 각 열 너비/정렬 조정 – 여기서 간격 미세하게 튜닝 가능
@@ -132,3 +134,20 @@
     width: 50px;
     text-align: center;
 } */
+
+
+.property2 {
+    width: 900px;
+    height: 450px;
+    margin: 0px auto 0 auto;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+.property2 img {
+    margin: 0px 0 0 auto;
+    display: flex;
+    position: relative;
+    width: 100%;
+}

@@ -90,16 +90,11 @@ body {
 }
 /* 소개-카드-이미지부모 */
 .info-box-item {
+    display: flex;
     width: 65px;
     height: 65px;
     background: #B92023;
     border-radius: 32.5px;
-    margin: auto auto auto auto;
-    justify-content: center;
-    align-items: center;
-}
-/* 소개-카드-이미지 */
-.info-box-item img {
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -122,9 +117,9 @@ body {
 }
 /* 소개-이미지 */
 .info-box-img {
-    width: 50px;
-    height: auto;
-    margin: auto;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
 }
 /* 소개-박스-제목 */
 .info-box-title {
