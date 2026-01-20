@@ -13,20 +13,20 @@
         
         <link rel="icon" href="Icon/MD_Resource/MD_logo_350.png">
     </head>
-    <body>
-        
+    <body oncontextmenu="return false;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 999; background: rgba(0,0,0,0);"></div>
         <div class="menu-container">
             <div class="menu-line"></div>
             <img class="menu-logo" src="Icon/MD_Resource/MD_logo_350.png" 
-                onclick="window.location.href='index.html'"/>
-            <li class="menu-item"><a href="info-container">홈</a></li>
-            <li class="menu-item"><a href=".profile">프로필</a></li>
-            <li class="menu-item"><a href=".service">서비스</a></li>
-            <li class="menu-item"><a href=".intellectual-property">기술자산</a></li>
-            <li class="menu-item"><a href=".service-center">고객센터</a></li>
+                onclick="goto_home()"/>
+            <li class="menu-item"><a href="javascript:void(0);" onclick="goto_home()">홈</a></li>
+            <li class="menu-item"><a href="javascript:void(0);" onclick="goto_profile()">프로필</a></li>
+            <li class="menu-item"><a href="javascript:void(0);" onclick="goto_service()">서비스</a></li>
+            <li class="menu-item"><a href="javascript:void(0);" onclick="goto_tech()">기술자산</a></li>
+            <li class="menu-item"><a href="javascript:void(0);" onclick="goto_center()">고객센터</a></li>
         </div>
 
-        <div class="info-container">
+        <div class="info-container" id="home">
             <img class="info-img" src="home.png"/>
 
             <div class="info-content">
@@ -64,11 +64,11 @@
 
             <div class="company-title">(주)모션다이나믹스</div>
             <div class="company-content">
-                본 회사는 첨단 기술 기반의 모션 플랫폼 및 스마트 시스템 개발 전문 기업입니다. 차별화된 기술력과 노하우를 바탕으로 혁신적인 제품과 서비스를 제공하며, 미래 성장을 위한 핵심 역량을 구축하고 있습니다.
+                본 회사는 첨단 기술 기반의 모션 플랫폼 및 스마트 시스템 <br>개발 전문 기업입니다. 차별화된 기술력과 노하우를 바탕으로 <br>혁신적인 제품과 서비스를 제공하며, 미래 성장을 위한 핵심 <br>역량을 구축하고 있습니다.
             </div>
         </div>
 
-        <div class="history-container">
+        <div class="history-container" id="profile">
             <img class="history-bg" src="IMG/empty-1.jpg"/>
             <div class="history-title">(주)모션다이나믹스</div>
             <p class="history-label1">
@@ -137,7 +137,7 @@
             </div>
         </div>
 
-        <div class="service">
+        <div class="service" id="service">
             <div class="service1"><hr>
                 <img src="IMG/empty-3.jpg"/>
                 <p class="service1-title">6-DOF Electric Motion Platform Technology</p>
@@ -482,7 +482,7 @@
             </div>
         </div>
 
-        <div class="intellectual-property"><hr>
+        <div class="intellectual-property" id="technology"><hr>
             <img class="property-img" src="IMG/empty-12.jpg"/>
             <div class="property1">
                 <img src="IMG/empty-13.jpg"/>
@@ -1477,6 +1477,21 @@
                     <p class="intellectual6-info6-col2-p2">스마트 발효톱밥<br>생산시스템 (대형)</p>
                 </div>
             </div>
+        </div>
+
+        <div class="service-center" id="center"><hr>
+            <p class="center-info1-title">오시는길</p>
+            <img class="center-map" src="IMG/factoryMap.png"/>
+            <p class="center-info1-content">
+                주소 : 전북특별자치도 익산시 삼기면 미륵사지로 795-7 (오룡리)<br>
+            </p>
+            <hr>
+            <div class="center-content">
+                <img class="center-img" src="IMG/factoryImgKR.png"/>
+                <img class="center-bkr" src="IMG/imgbnbkr.png"/>
+                <p>브로커 다운로드</p>
+            </div>
+            
         </div>
     </body>
 </html>
