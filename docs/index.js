@@ -1,25 +1,45 @@
 function goto_home() {
-    document.querySelector("#home").scrollIntoView({behavior : 'smooth'});
+    const home = document.querySelector("#home");
+    if (home)
+        home.scrollIntoView({behavior : 'smooth'});
+    else 
+        location.href = "index.html";
 }
 
 function goto_profile() {
-    document.querySelector("#profile").scrollIntoView({behavior : 'smooth'});
+    const profile = document.querySelector("#profile");
+    if (profile) 
+        profile.scrollIntoView({behavior : 'smooth'});
+    else 
+        location.href = "profile.html";
 }
 
 function goto_service() {
-    document.querySelector("#service").scrollIntoView({behavior : 'smooth'});
+    const service = document.querySelector("#service");
+    if(service)
+        service.scrollIntoView({behavior : 'smooth'});
+    else
+        location.href = "service.html";
 }
 
 function goto_tech() {
-    document.querySelector("#technology").scrollIntoView({behavior : 'smooth'});
+    const tech = document.querySelector("#technology");
+    if (tech)
+        tech.scrollIntoView({behavior : 'smooth'});
+    else
+        location.href = "service.html";
 }
 
 function goto_center() {
-    document.querySelector("#center").scrollIntoView({behavior : 'smooth'});
+    const center = document.querySelector("#center");
+    if (center)
+        center.scrollIntoView({behavior : 'smooth'});
+    else
+        location.href = "center.html";
 }
 
 function download_catalog() {
-    window.location.href = 'catalog.pdf';
+    window.location.href = 'catalog(new).pdf';
 }
 
 window.addEventListener('keydown', function (e) {

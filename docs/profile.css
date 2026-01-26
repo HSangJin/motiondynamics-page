@@ -1,0 +1,214 @@
+
+/* 회사이름라벨 */
+.company-title {
+    color: white;
+    display: absolute;
+    position: relative;
+    margin: -220px 50px;
+    padding-right: 20px;
+    font-size: 30px;
+    text-align: end;
+}
+/* 회사소개라벨 */
+.company-content {
+    color: #494949;
+    display: flex;
+    position: relative;
+    margin: 240px 40px;
+    padding-left: 55%;
+    text-align: end;
+    font-size: 14px;
+    width: 350px;
+}
+/* 회사연혁-배경 */
+.history-bg {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    image-resolution: 100%;
+}
+/* 회사연혁-이름 */
+.history-title {
+    display: flex;
+    position: relative;
+    top: -12.8vw;
+    left: -27vw;
+    margin: 0;
+    font-size: 3vw;
+    color: white;
+}
+/* 회사연혁 */
+@media (min-width: 768px) {
+    .history-container {
+        justify-items: center;
+        align-items: center;
+        line-height: 0px;
+        width: 100%;
+        height: 54vw;
+        line-height: 0;
+        padding-top: 0px;
+    }    
+}
+
+@media (max-width: 768px) {
+    .history-container {
+        justify-items: center;
+        align-items: center;
+        line-height: 0px;
+        width: 100%;
+        height: 54vw;
+        line-height: 0;
+    }    
+}
+
+
+/* 회사연혁-내용 */
+.history-container p {
+    color: #494949;
+    font-size: 1vw;
+    display: flex;
+    position: relative;
+    text-align: start;
+    line-height: 1.2vw;
+}
+/* 회사연혁-내용-step1 */
+.history-label1 {
+    /* margin: -17px 95px 0 510px; */
+    top: -12.7vw;
+    left: 18.5vw;
+    width: auto;
+}
+/* 회사연혁-내용-step2 */
+.history-label2 {
+    /* margin: -235px 75px 0 525px; */
+    width: auto;
+    top: -38.8vw;
+    left: 22.6vw;
+}
+/* 회사연혁-내용-step3 */
+.history-label3 {
+    /* margin: -253px 50px 0 540px; */
+    width: auto;
+    top: -66.8vw;
+    left: 20vw;
+}
+
+.profile {
+    margin: 0;
+    width: 100vw;
+    justify-items: center;
+    align-items: center;
+    line-height: 0;
+    position: relative;
+}
+
+.profile img {
+    margin: 0 auto 0 auto;
+    display: flex;
+    position: relative;
+    width: 30vw;
+}
+
+.profile div {
+    display: flex;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transform-origin: center;
+}
+
+
+
+/* 비전및목표-비전 */
+.profile-vision-icon-title {
+    top: calc(50% - 12.5vw);
+    left: calc(50%);
+    font-size: 3.5vw;
+    color: #7F7F7F;
+}
+
+.profile-vision-icon-label {
+    top: calc(50% - 9.8vw);
+    left: calc(50% + 0.8vw);
+    font-size: 1.5vw;
+    color: #7F7F7F;
+}
+
+.profile-vision-content-title {
+    top: calc(50% - 22.5vw);
+    left: calc(50% - 12.5vw);
+    font-size: 1.8vw;
+    color: #B92023;
+}
+
+.profile-vision-content-label {
+    top: calc(50% - 21vw);
+    left: calc(50% - 23vw);
+    font-size: 1.5vw;
+    color: #7F7F7F;
+    text-align: end;
+    line-height: 2.5vw;
+}
+
+/* 비전및목표-핵심가치 */
+.profile-core-icon-title {
+    top: calc(50% - 3.2vw);
+    left: calc(50% - 12.9vw);
+    font-size: 3.5vw;
+    color: #7F7F7F;
+}
+
+.profile-core-icon-label {
+    top: calc(50% );
+    left: calc(50% - 11vw);
+    font-size: 1.5vw;
+    color: #7F7F7F;
+}
+
+.profile-core-content-title {
+    top: calc(50% - 4vw);
+    left: calc(50% - 29vw);
+    font-size: 1.8vw;
+    color: #B92023;
+}
+
+.profile-core-content-label {
+    top: calc(50% - 2vw);
+    left: calc(50% - 31vw);
+    color: #7F7F7F;
+    text-align: end;
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+}
+
+/* 비전및목표-핵심전략 */
+.profile-strategy-icon-title {
+    top: calc(50% + 2.5vw);
+    left: calc(50% + 0.1vw);
+    font-size: 3.5vw;
+    color: #7F7F7F;
+}
+
+.profile-strategy-icon-label {
+    top: calc(50% + 5.8vw);
+    left: calc(50% + 2.9vw);
+    font-size: 1.5vw;
+    color: #7F7F7F;
+}
+
+.profile-strategy-content-title {
+    top: calc(50% + 3vw);
+    left: calc(50% + 18vw);
+    font-size: 1.8vw;
+    color: #B92023;
+}
+
+.profile-strategy-content-label {
+    top: calc(50% + 4.8vw);
+    left: calc(50% + 17vw);
+    font-size: 1.5vw;
+    color: #7F7F7F;
+    text-align: end;
+    line-height: 2.5vw;
+}
