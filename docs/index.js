@@ -1,21 +1,30 @@
-// server/index.ts
-import express from "express";
-import { createServer } from "http";
-import path from "path";
-import { fileURLToPath } from "url";
-var __filename = fileURLToPath(import.meta.url);
-var __dirname = path.dirname(__filename);
-async function startServer() {
-  const app = express();
-  const server = createServer(app);
-  const staticPath = process.env.NODE_ENV === "production" ? path.resolve(__dirname, "public") : path.resolve(__dirname, "..", "dist", "public");
-  app.use(express.static(staticPath));
-  app.get("*", (_req, res) => {
-    res.sendFile(path.join(staticPath, "index.html"));
-  });
-  const port = process.env.PORT || 3e3;
-  server.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}/`);
-  });
+function goto_home() {
+    document.querySelector("#home").scrollIntoView({behavior : 'smooth'});
 }
-startServer().catch(console.error);
+
+function goto_profile() {
+    document.querySelector("#profile").scrollIntoView({behavior : 'smooth'});
+}
+
+function goto_service() {
+    document.querySelector("#service").scrollIntoView({behavior : 'smooth'});
+}
+
+function goto_tech() {
+    document.querySelector("#technology").scrollIntoView({behavior : 'smooth'});
+}
+
+function goto_center() {
+    document.querySelector("#center").scrollIntoView({behavior : 'smooth'});
+}
+
+function download_catalog() {
+    window.location.href = 'catalog.pdf';
+}
+
+window.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'p')) {
+      e.preventDefault();
+      return false;
+    }
+  });
