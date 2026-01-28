@@ -1,50 +1,21 @@
-function goto_home() {
-    const home = document.querySelector("#home");
-    if (home)
-        home.scrollIntoView({behavior : 'smooth'});
-    else 
-        location.href = "index.html";
-}
-
-function goto_profile() {
-    const profile = document.querySelector("#profile");
-    if (profile) 
-        profile.scrollIntoView({behavior : 'smooth'});
-    else 
-        location.href = "profile.html";
-}
-
-function goto_service() {
-    const service = document.querySelector("#service");
-    if(service)
-        service.scrollIntoView({behavior : 'smooth'});
-    else
-        location.href = "service.html";
-}
-
-function goto_tech() {
-    const tech = document.querySelector("#technology");
-    if (tech)
-        tech.scrollIntoView({behavior : 'smooth'});
-    else
-        location.href = "service.html";
-}
-
-function goto_center() {
-    const center = document.querySelector("#center");
-    if (center)
-        center.scrollIntoView({behavior : 'smooth'});
-    else
-        location.href = "center.html";
-}
-
-function download_catalog() {
-    window.location.href = 'catalog(new).pdf';
-}
-
-window.addEventListener('keydown', function (e) {
-    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'p')) {
-      e.preventDefault();
-      return false;
-    }
+// server/index.ts
+import express from "express";
+import { createServer } from "http";
+import path from "path";
+import { fileURLToPath } from "url";
+var __filename = fileURLToPath(import.meta.url);
+var __dirname = path.dirname(__filename);
+async function startServer() {
+  const app = express();
+  const server = createServer(app);
+  const staticPath = process.env.NODE_ENV === "production" ? path.resolve(__dirname, "public") : path.resolve(__dirname, "..", "dist", "public");
+  app.use(express.static(staticPath));
+  app.get("*", (_req, res) => {
+    res.sendFile(path.join(staticPath, "index.html"));
   });
+  const port = process.env.PORT || 3e3;
+  server.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}/`);
+  });
+}
+startServer().catch(console.error);
