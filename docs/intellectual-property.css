@@ -1,11 +1,13 @@
 /* --------------------------------------------- */
 
 .intellectual-property {
-    width: 900px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     height: auto;
-    margin: 0px auto 0 auto;
-    justify-items: center;
+    align-items: center;
     position: relative;
+    padding-top: 5vw;
 }
 
 .intellectual-property hr {
@@ -14,16 +16,19 @@
     position: relative;
     top: 0px;
     background: #B92023;
+    border: 0;
+    min-height: 1px;
 }
 
 .property-img {
-    margin: 0px 0 0 auto;
     display: flex;
     position: relative;
-    width: 100%;
+    width: 90%;
 }
 
 .property1 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 450px;
     margin: 0px auto 0 auto;
@@ -137,6 +142,8 @@
 
 
 .property2 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 450px;
     margin: 0px auto 0 auto;
@@ -274,6 +281,8 @@
 
 
 .property3 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 450px;
     margin: 0px auto 0 auto;
@@ -339,6 +348,8 @@
 
 
 .property4 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 450px;
     margin: 0px auto 0 auto;
@@ -376,6 +387,8 @@
 
 
 .intellectual1 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 450px;
     margin: 0px auto 0 auto;
@@ -824,6 +837,8 @@
 
 
 .intellectual1 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 450px;
     margin: 0px auto 0 auto;
@@ -954,6 +969,8 @@
 
 
 .intellectual2 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 450px;
     margin: 0px auto 0 auto;
@@ -1402,6 +1419,8 @@
 
 
 .intellectual3 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 450px;
     margin: 20px auto 0 auto;
@@ -1859,6 +1878,8 @@
 
 
 .intellectual4 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 420px;
     margin: 0px auto 0 auto;
@@ -2001,6 +2022,8 @@
 
 
 .intellectual5 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 420px;
     margin: 0px auto 0 auto;
@@ -2255,6 +2278,8 @@
 
 
 .intellectual6 {
+    display: flex;
+    flex-direction: column;
     width: 900px;
     height: 420px;
     margin: 40px auto 0 auto;
