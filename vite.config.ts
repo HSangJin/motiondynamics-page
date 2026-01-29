@@ -69,6 +69,24 @@ function writeToLogFile(source: LogSource, entries: unknown[]) {
 }
 
 /**
+ * GitHub Pages 배포 시 새로고침 문제를 해결하기 위해
+ * index.html을 복사하여 404.html을 생성하는 플러그인
+ */
+function make404Plugin(): Plugin {
+  return {
+    name: "make-404",
+    writeBundle(options) {
+      if (!options.dir) return;
+      const indexHtml = path.join(options.dir, "index.html");
+      const fourOhFourHtml = path.join(options.dir, "404.html");
+      if (fs.existsSync(indexHtml)) {
+        fs.copyFileSync(indexHtml, fourOhFourHtml);
+      }
+    },
+  };
+}
+
+/**
  * Vite plugin to collect browser debug logs
  * - POST /__manus__/logs: Browser sends logs, written directly to files
  * - Files: browserConsole.log, networkRequests.log, sessionReplay.log
@@ -150,7 +168,10 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), make404Plugin()];
+
+// 환경 변수가 정의되지 않았을 때 HTML 빌드 오류(400 Bad Request)를 방지하기 위한 기본값 설정
+process.env.VITE_ANALYTICS_ENDPOINT = process.env.VITE_ANALYTICS_ENDPOINT || "";
 
 export default defineConfig({
   plugins,
@@ -160,14 +181,18 @@ export default defineConfig({
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
-    plugins:[react()],
-    base:'./',
   },
+  // 중요: GitHub 리포지토리 이름과 동일하게 설정해야 합니다.
+  // 예: https://username.github.io/motiondynamics-page/ 라면 '/motiondynamics-page/'
+  base: "/motiondynamics-page/",
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+  },
+  define: {
+    "process.env.VITE_ANALYTICS_ENDPOINT": JSON.stringify(process.env.VITE_ANALYTICS_ENDPOINT || ""),
   },
   server: {
     port: 3000,
