@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename)
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "./",
+  base: "/motiondynamics-page/",
   publicDir: "client/public", // public 폴더 위치 명시 (client 폴더 안에 있다면)
   build: {
     outDir: "dist",
