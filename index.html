@@ -12,8 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <script type="module" crossorigin src="./assets/index-BSSNh7nV.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CcQibkac.css">
+    <script type="module" crossorigin src="./assets/index-4r1d5zsR.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BwxYAvB6.css">
+    <script src="/__manus__/debug-collector.js" defer></script>
   </head>
 
   <body>
@@ -78,6 +79,46 @@ Error generating stack: `+l.message+`
 </script>
 
     <div id="root"></div>
+    <script
+      defer
+      src="https://manus-analytics.com/umami"
+      data-website-id="9c8c1132-9116-411b-8281-2cfc823c3ed8"></script>
   </body>
 
 </html>
+
+    <!-- Live Server SPA Routing -->
+    <script>
+      (function() {
+        const path = window.location.pathname;
+        const isRootPath = path === '/' || path === '/index.html';
+        const isMotionDynamicsPath = path.includes('/motion-dynamics/');
+        
+        if (!isRootPath) {
+          let cleanPath;
+          if (isMotionDynamicsPath) {
+            cleanPath = path.replace(/\/motion-dynamics/, '').replace(/\/$/, '') || '/';
+            sessionStorage.setItem('spa-path', cleanPath);
+            window.location.href = '/motion-dynamics/';
+          } else {
+            // Handle root-level paths like /about, /products, /contact, /esg
+            cleanPath = path.replace(/\/$/, '') || '/';
+            sessionStorage.setItem('spa-path', cleanPath);
+            window.location.href = '/';
+          }
+        }
+      })();
+      
+      window.addEventListener('load', function() {
+        const savedPath = sessionStorage.getItem('spa-path');
+        if (savedPath && savedPath !== '/') {
+          sessionStorage.removeItem('spa-path');
+          const currentPath = window.location.pathname;
+          if (currentPath.includes('/motion-dynamics/')) {
+            window.history.replaceState({}, '', '/motion-dynamics' + savedPath);
+          } else {
+            window.history.replaceState({}, '', savedPath);
+          }
+        }
+      });
+    </script>
